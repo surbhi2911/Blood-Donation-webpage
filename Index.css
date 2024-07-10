@@ -1,0 +1,322 @@
+/* ******** */
+.margin_all {
+    margin: 20px;
+}
+
+*{
+    scroll-behavior: smooth;
+}
+
+/* ******** */
+
+/* Back to Top ---start---*/
+
+.return {
+    color: white;
+    background: #BE3438;
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 10;
+    position: fixed;
+    bottom: 50px;
+    right: 40px;
+}
+
+/* Back to Top ---end---*/
+
+/*Donate Button CSS ---start---*/
+
+.blink-button {
+    font-size: 18px;
+    color: white;
+    background-color: #be3438;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: blink 2s infinite;
+}
+
+.blink-button2 {
+    font-size: 18px;
+    color: white;
+    background-color: #be3438;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        background-color: #be3438;
+        box-shadow: 6px 5px 10px #be3438;
+    }
+
+    50% {
+        background-color: darkred;
+        box-shadow: 6px 5px 10px darkred;
+    }
+}
+
+/*Donate Button CSS ---end---*/
+
+/* Crousel CSS ---start---*/
+#slider {
+    position: relative;
+    width: 60%;
+    height: 34vw;
+    margin: 20px auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+}
+
+input[type=radio]:nth-child(5) {
+    margin-right: 0px;
+}
+
+input[type=radio]:checked {
+    opacity: 1;
+}
+
+input {
+    height: 0;
+    width: 0;
+}
+
+#slider label,
+#slider label img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    color: white;
+    font-size: 70px;
+    font-weight: bold;
+    border-radius: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 3s;
+}
+
+/* Active Slide */
+#s1:checked~#slide1,
+#s2:checked~#slide2,
+#s3:checked~#slide3,
+#s4:checked~#slide4,
+#s5:checked~#slide5 {
+    box-shadow: 0 13px 26px rgba(0, 0, 0, 0.3), 0 12px 6px rgba(0, 0, 0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+}
+
+/* Next Slide */
+#s1:checked~#slide2,
+#s2:checked~#slide3,
+#s3:checked~#slide4,
+#s4:checked~#slide5,
+#s5:checked~#slide1 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(20%, 0, -100px);
+    filter: brightness(50%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Next to Next Slide */
+#s1:checked~#slide3,
+#s2:checked~#slide4,
+#s3:checked~#slide5,
+#s4:checked~#slide1,
+#s5:checked~#slide2 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(40%, 0, -250px);
+    filter: brightness(50%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked~#slide4,
+#s2:checked~#slide5,
+#s3:checked~#slide1,
+#s4:checked~#slide2,
+#s5:checked~#slide3 {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    transform: translate3d(-40%, 0, -250px);
+    filter: brightness(50%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+/* Previous Slide */
+#s1:checked~#slide5,
+#s2:checked~#slide1,
+#s3:checked~#slide2,
+#s4:checked~#slide3,
+#s5:checked~#slide4 {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3), 0 2px 2px rgba(0, 0, 0, 0.2);
+    transform: translate3d(-20%, 0, -100px);
+    filter: brightness(50%);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+@keyframes marquee {
+    0% {
+        left: 0;
+    }
+
+    50% {
+        left: -50%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+
+@media screen and (max-width:853px) {
+    #slider {
+        position: relative;
+        width: 65%;
+        height: 50vw;
+        margin: 20px auto;
+        font-family: 'Helvetica Neue', sans-serif;
+        perspective: 1400px;
+        transform-style: preserve-3d;
+    }
+}
+
+/* Crousel CSS ---end---*/
+
+
+/*YouTube Video Content ---start----*/
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 100%;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border: 2px solid black;
+}
+
+.video-container:hover {
+    border: 2px solid #e66562;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* text content */
+.attractive-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #ef3d32;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+}
+
+.highlight {
+    color: #f39c12;
+    font-style: bold;
+}
+
+
+/*YouTube Video Content ---end----*/
+
+
+/*YouTube Video Side Content ---start----*/
+.hero {
+    background: linear-gradient(to right, #ff6f61, #de6262);
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.content {
+    padding: 10px;
+}
+
+.content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.content ul li {
+    padding: 3px 0;
+}
+
+.content ul li:before {
+    content: "✓";
+    color: #ff6f61;
+    margin-right: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero p::first-letter {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*YouTube Video Side Content ---end----*/
+
+/* FOOTER CSS ---start--- */
+.contact-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 4px #de6262;
+    margin: 8px auto;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+    color: #de6262;
+
+}
+
+.contact-info .fa-phone,
+.contact-info .fa-envelope {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+    color: #de6262;
+}
+
+.social-icons a:hover {
+    color: #de6262;
+}
+
+.project-credit {
+    margin-top: 10px;
+    color: #de6262;
+}
+
+/* FOOTER CSS ---end--- */
